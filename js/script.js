@@ -69,20 +69,36 @@ function proses() {
             const hasil = bb / (tb * tb);
 
             // Menentukan Status Berat Badan Berdasarkan BMI
-            let pesan = false;
-            if(hasil < 1.85) pesan = 'Kurang Berat Badan';
-            else if(hasil < 24.9) pesan = 'Normal';
-            else if(hasil < 29.9) pesan = 'Kelebihan Berat Badan';
-            else if(hasil >= 30) pesan = 'Kegemukan (Obesitas)';
+            let pesan = [];
+            if(hasil < 18.5) {
+                pesan['judul'] = 'Kurang Berat Badan';
+                pesan['deskripsi'] = 'kurang dari 18.5';
+                pasan['saran'] = 'menaikkan berat badan hingga batas normal'
+            } else if(hasil < 24.9) {
+                pesan['judul'] = 'Normal';
+                pesan['deskripsi'] = 'antara 18.5 dan 24.9';
+                pesan['saran'] = 'pertahankan pola makan dan rajin olahraga';
+            } else if(hasil < 29.9) {
+                pesan['judul'] = 'Kelebihan Berat Badan';
+                pesan['deskripsi'] = 'diantara 25.0 dan 29.9';
+                pesan['saran'] = 'menurunkan berat badan hingga batas normal';
+            } else if(hasil >= 30) {
+                pesan['judul'] = 'Kegemukan (Obesitas)';
+                pesan['deskripsi'] = 'sama dengan 30 atau lebih';
+                pesan['saran'] = 'segera konsultasi dengan dokter'
+            }
 
             // Menghilangkan Form Kalkulator BMI Dari Layar
             document.getElementById('kalkulator').style.display= "none";
 
             // Menampilkan Hasil Status Berat Badan
-            document.getElementById('hasil').style.display= "block";
+            document.getElementById('hasil').style.display= "flex";
 
-            // Mengubah Teks pada Element dengan ID pesan-bmi menjadi sesuai status berat badan 
-            document.getElementById('pesan-bmi').innerHTML = pesan;
+            // Mengubah Teks pada Element sesuai ID menjadi sesuai status berat badan 
+            document.getElementById('pesan-bmi').innerHTML = pesan['judul'];
+            document.getElementById('pesan-bmi-kategori').innerHTML = pesan['judul'];
+            document.getElementById('pesan-bmi-deskripsi').innerHTML = pesan['deskripsi'];
+            document.getElementById('pesan-bmi-saran').innerHTML = pesan['saran'];
             
             // Mengubah Teks pada Element dengan ID bmi menjadi sesuai bmi 
             document.getElementById('bmi').innerHTML = hasil.toFixed(1);
