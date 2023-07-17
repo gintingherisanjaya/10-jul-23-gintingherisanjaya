@@ -1,5 +1,5 @@
 .container {
-    background-color: gray;
+    background-color: #ddd;
     padding-top: 50px;
     padding-left: 50px;
 }
@@ -7,6 +7,10 @@
 .kalkulator {
     padding: 10px auto;
     display: block;
+}
+
+.hasil {
+    display: none;
 }
 
 .form-group {
@@ -27,11 +31,38 @@ input[type='number'] {
     padding: 10px 20px;
 }
 
+
 button {
     padding: 10px;
     width: 840px;
     font-size: 20px;
     color: white;
-    background-color: blueviolet;
     border: none;
+    margin: 10px auto;
+}
+
+#hitung {
+    background-color: #36a949;
+}
+
+#reset {
+    background-color: #32aeec;
+}
+
+#kembali {
+    background-color: #36a949;
+}
+
+#pesan-bmi {
+    padding: 10px;
+    width: 840px;
+    text-align: center;
+}
+
+#bmi {
+    padding: 10px;
+    width: 840px;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
 }

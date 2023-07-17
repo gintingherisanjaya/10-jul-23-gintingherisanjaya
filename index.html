@@ -7,31 +7,38 @@
     <title>Kalkulator BMI</title>
 </head>
 <body class="container">
-        <div class="kalkulator">
-            <form action="#">
+        <div class="kalkulator" id="kalkulator">
                 <div class="form-group">
                     <label for="jk"> Jenis Kelamin</label>
-                    <input type="radio" name="jk" id="jk" value="Pria" required> Pria
-                    <input type="radio" name="jk" id="jk" value="Wanita" required> Wanita
+                    <input type="radio" name="jk" id="jk" value="Pria" checked> Pria
+                    <input type="radio" name="jk" id="jk" value="Wanita"> Wanita
                 </div>
                 <div class="form-group">
                     <label for="bb"> Berat Badan (kg)</label>
-                    <input type="number" min="1" name="bb" id="bb" required>
+                    <input type="number" name="bb" id="bb" placeholder="Ketik Berat Badan Anda dalam satuan kilogram (satuan tidak ditulis)">
                 </div>
                 <div class="form-group">
                     <label for="usia"> Usia (tahun)</label>
-                    <input type="number" min="1" name="usia" id="usia" required>
+                    <input type="number" name="usia" id="usia" placeholder="Ketik Usia Anda">
                 </div>
                 <div class="form-group">
                     <label for="tb"> Tinggi Badan (cm)</label>
-                    <input type="number" min="1" name="tb" id="tb" required>
+                    <input type="number" name="tb" id="tb" placeholder="Ketik Tinggi Badan Anda dalam centimeter (satuan tidak ditulis)">
                 </div>
                 <div class="form-group">
-                    <button type="submit">Hitung BMI</button>
+                    <button id="hitung" onclick="proses()">Hitung BMI</button>
+                    <button id="reset" onclick="location.reload()">Reset</button>
                 </div>
-            </form>
         </div>
-        <div class="hasil">
+        <div class="hasil" id="hasil">
+            <h1 id="pesan-bmi"></h1>
+            <p id="bmi"></p>
+            <div class="form-group">
+                <button id="kembali" onclick="location.reload()">Kembali</button>
+            </div>
         </div>
+
+        <script src="./js/script.js"></script>
+
 </body>
 </html>
