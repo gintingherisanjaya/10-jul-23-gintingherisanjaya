@@ -1,0 +1,37 @@
+.container {
+    background-color: gray;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.kalkulator {
+    padding: 10px auto;
+    display: block;
+}
+
+.form-group {
+    margin: 15px;
+}
+
+label {
+    font-weight: bolder;
+}
+
+label::after {
+    content: " ";
+    display: block;
+}
+
+input[type='number'] {
+    width: 800px;
+    padding: 10px 20px;
+}
+
+button {
+    padding: 10px;
+    width: 840px;
+    font-size: 20px;
+    color: white;
+    background-color: blueviolet;
+    border: none;
+}
