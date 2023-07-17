@@ -6,7 +6,7 @@
 
 .kalkulator {
     padding: 10px auto;
-    display: block;
+    display: flex;
 }
 
 .hasil {
@@ -50,7 +50,7 @@ button {
 }
 
 #kembali {
-    background-color: #36a949;
+    background-color: #fba734;
 }
 
 #pesan-bmi {
@@ -65,4 +65,9 @@ button {
     text-align: center;
     font-size: 40px;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.keterangan {
+    background-color: white;
+    padding: 30px;
 }

@@ -8,6 +8,7 @@
 </head>
 <body class="container">
         <div class="kalkulator" id="kalkulator">
+            <div class="konteks">
                 <div class="form-group">
                     <label for="jk"> Jenis Kelamin</label>
                     <input type="radio" name="jk" id="jk" value="Pria" checked> Pria
@@ -29,6 +30,28 @@
                     <button id="hitung" onclick="proses()">Hitung BMI</button>
                     <button id="reset" onclick="location.reload()">Reset</button>
                 </div>
+            </div>
+            <div class="keterangan">
+                <h2>Keunggulan Fitur : </h2>
+                <p>
+                    <ol>
+                        <li>Menghitung berat badan</li>
+                        <li>Menentukan kategori berat badan ideal atau tidak</li>
+                    </ol>
+                </p>
+
+                <p align="justify">
+                    &emsp;Kalkulator ini hanya boleh digunakan oleh orang dewasa. Tidak direkomendasikan untuk wanita hamil atau menyusui
+                    Tidak ada tindakan yang perlu diambil berdasarkan hasil perhitungan ini.
+                    Anda dapat berkonsultasi ke dokter untuk memiliki berat badan yang lebih sehat dan ideal.
+                </p>
+
+                <p align="justify">
+                    &emsp;Kalkulator ini memberi anda gambaran tentang perbandingan berat badan anda dengan nilai umum. 
+                    Indeks Masa Tubuh (atau BMI) dihitung sebagai berat badan anda (dalam kilogram) dibagi dengan kuadrat tinggi badan anda (dalam meter)
+                    atau BMI = Kg/M<sup>2</sup>
+                </p>
+            </div>
         </div>
         <div class="hasil" id="hasil">
             <h1 id="pesan-bmi"></h1>
